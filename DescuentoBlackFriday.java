@@ -3,7 +3,7 @@ import java.util.Calendar;
 
 public class DescuentoBlackFriday {
 
-	public static double PrecioFinal(double PrecioOriginal) {
+	public double PrecioFinal(double PrecioOriginal) {
 		Calendar calendar = Calendar.getInstance();
 		int day = calendar.get(Calendar.DATE);
 		int month = calendar.get(Calendar.MONTH) + 1; //Note: +1 the month for current month

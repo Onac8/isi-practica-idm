@@ -11,7 +11,7 @@ public class RomanNumeral {
 		* @throws NullStringException if string is null
     */
 
-	public static int convierte (String romanNumber) {
+	public int convierte (String romanNumber) {
 
 		if (romanNumber == ""){
 			throw new IllegalArgumentException ("RomanNumeral.convierte");

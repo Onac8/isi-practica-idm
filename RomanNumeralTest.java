@@ -9,32 +9,41 @@ import java.util.*;
 
 public class RomanNumeralTest
 {
+
+	private RomanNumeral number;
+
+	@Before      // Set up - Called before every test method.
+	public void setUp()
+	{
+		number = new RomanNumeral();
+	}
+
 	// Test para String nulo
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNullString()
 	{
-		RomanNumeral.convierte("");
+		number.convierte("");
 	}
 
 	// Test para String ilegal
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNoRoman()
 	{
-		RomanNumeral.convierte("HJK");
+		number.convierte("HJK");
 	}
 
 	// Test para String ilegal (pero parecido a romano)
 	// @Test (expected = IllegalArgumentException.class)
 	// public void testForIllegalRoman()
 	// {
-	// 	RomanNumeral.convierte("XIIII");
+	// 	number.convierte("XIIII");
 	// }
 
 	// Test para String romano
 	@Test
 	public void testForRoman()
 	{
-		assertTrue("Ese numero no es romano", 17 == RomanNumeral.convierte("XVII")); // Se imprimirá este msg si test falla
+		assertTrue("Ese numero no es romano", 17 == number.convierte("XVII")); // Se imprimirá este msg si test falla
 	}
 
 }
