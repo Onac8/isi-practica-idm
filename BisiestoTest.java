@@ -9,12 +9,12 @@ import java.util.*;
 
 public class BisiestoTest
 {
-	public Bisiestos year;
+	private Bisiestos year;
 
 	@Before      // Set up - Called before every test method.
 	public void setUp()
 	{
-		Bisiestos year = new Bisiestos();
+		year = new Bisiestos();
 	}
 
 	//Test para comprobar que con año negativo se eleva la excepción.
