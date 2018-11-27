@@ -41,9 +41,16 @@ public class EmbotelladoraTest
 
 	//Test con pequenas=grandes=0
 	@Test (expected = IllegalArgumentException.class)
-	public void testForZeroTotal()
+	public void testForZeroBotellas()
 	{
 		embotelladora.calculaBotellasPequenas(0,0,10);
+	}
+
+	//Test con litros totales = 0
+	@Test (expected = IllegalArgumentException.class)
+	public void testForZeroTotal()
+	{
+		embotelladora.calculaBotellasPequenas(1,2,0);
 	}
 
 
