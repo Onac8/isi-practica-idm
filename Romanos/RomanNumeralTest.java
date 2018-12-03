@@ -19,6 +19,7 @@ public class RomanNumeralTest
 	}
 
 	// Test para String nulo
+	// Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNullString()
 	{
@@ -26,6 +27,7 @@ public class RomanNumeralTest
 	}
 
 	// Test para String ilegal
+	// Caminos recorridos: (1,3,4,5,14)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNoRoman()
 	{
@@ -40,6 +42,7 @@ public class RomanNumeralTest
 	// }
 
 	// Test para String romano
+	// Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6)
 	@Test
 	public void testForRoman()
 	{
