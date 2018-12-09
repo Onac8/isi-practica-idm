@@ -10,7 +10,7 @@ public class DescuentoBlackFriday {
 	public DescuentoBlackFriday() {
 		this.calendar = Calendar.getInstance();
 		this.day = this.calendar.get(Calendar.DATE);
-		this.day = this.calendar.get(Calendar.MONTH) + 1; //Note: +1 the month for current month
+		this.month = this.calendar.get(Calendar.MONTH) + 1; //Note: +1 the month for current month
 	}
 
 	public double PrecioFinal(double PrecioOriginal) {
