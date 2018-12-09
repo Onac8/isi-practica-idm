@@ -13,18 +13,17 @@ public class Bisiestos {
 
 	public boolean esBisiesto (int año) {
 
+	boolean bisiesto = false;
 	if (año < 0) {
 		throw new IllegalArgumentException ("Bisiesto.esBisiesto");
 	}
 
 	if (año == 0){
-		return false;
+		bisiesto = false;
+	}else if ((año % 4 == 0) && ((año % 100 != 0) || (año % 400 == 0))) {
+		bisiesto = true;
 	}
-
-	if ((año % 4 == 0) && ((año % 100 != 0) || (año % 400 == 0))) {
-		return true;
-	}
-	return false;
+	return bisiesto;
 	}
 
 	public static void main(String args[]) {

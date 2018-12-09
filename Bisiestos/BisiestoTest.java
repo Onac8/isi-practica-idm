@@ -26,15 +26,23 @@ public class BisiestoTest
 	}
 
 	//Test para comprobar que año 0 no es bisiesto
-	//Caminos recorridos: (1,3,5)
+	//Caminos recorridos: (1,3,4,7)
 	@Test
 	public void testForZeroYear()
 	{
 		assertFalse(year.esBisiesto(0));
 	}
 
+	//Test para comprobar que año no es bisiesto
+	//Caminos recorridos: (1,3,5,7)
+	@Test
+	public void testForNoBisiesto()
+	{
+		assertFalse(year.esBisiesto(2018));
+	}
+
 	//Test para comprobar año múltiplo de 4
-	//Caminos recorridos: (1,4,5)
+	//Caminos recorridos: (1,3,5,6,7)
 	@Test
 	public void testMult4()
 	{
@@ -42,7 +50,7 @@ public class BisiestoTest
 	}
 
 	//Test para comprobar año múltiplo de 100 pero no de 400
-	//Caminos recorridos: (1,4,5)
+	//Caminos recorridos: (1,3,5,6,7)
 	@Test
 	public void testMult100()
 	{
@@ -50,7 +58,7 @@ public class BisiestoTest
 	}
 
 	//Test para comprobar año múltiplo de 400
-	//Caminos recorridos: (1,4,5)
+	//Caminos recorridos: (1,3,5,6,7)
 	@Test
 	public void testMult400()
 	{
