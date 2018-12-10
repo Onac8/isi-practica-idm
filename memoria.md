@@ -2,10 +2,8 @@
 
 ### Ejercicio 1 - Cálculo de años bisiestos
   * **Apartado 1.** Se analizará la clase `Bisiestos`, donde uno de sus métodos llamado `esBisiesto`, devuelve true o false si el año que le proporcionamos es o no bisiesto.
-
   * **Apartado 2.** Tenemos 1 parámetro:
-    * Tenemos un único Parámetro `año`, de tipo *int*. Este será el año que queremos comprobar si es bisiesto o no.
-
+* Tenemos un único Parámetro `año`, de tipo *int*. Este será el año que queremos comprobar si es bisiesto o no.
   * **Apartado 3.** Tendremos 3 caracterizaciones:
     * C1: año respecto del 0.
       * b1: año negativo
@@ -26,18 +24,19 @@
     * C2: 4 | 5
     * C3: 100 | 101
     * C4: 400 | 401
+  * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
+    * RT: [1, 2] [1, 3, 4, 7] [1, 3, 5, 7] [1, 3, 5, 6, 7]
 
-  * **Apartado 5 (Práctica 2).** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
-    * RT: [1, 2] [1, 5] [1, 3, 5] [1, 4, 5]
+  * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
+    * Caminos de prueba: [1, 2] [1, 3, 4, 7] [1, 3, 5, 7] [1, 3, 5, 6, 7]
 
-  * **Apartado 6 (Práctica 2).** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2] [1, 5] [1, 3, 5] [1, 4, 5]
-
-  * **Apartado 7 (Práctica 2).** Diagrama + comentarios en tests:
+  * **Práctica 2.c)** Diagrama + comentarios en tests:
     * `testForNegativeYear` : Caminos recorridos: (1,2).
-    * `testForZeroYear` : Caminos recorridos: (1,3,5).
-    * `testMult4`, `testMult100`, `testMult400`: Caminos recorridos: (1,4,5).
-    * INSERTAR IMAGEN
+    * `testForZeroYear` : Caminos recorridos: (1,3,4,7).
+    * `testMult4`, `testMult100`, `testMult400`: Caminos recorridos: (1,3,5,6,7).
+    * Añadimos `testForNoBisiesto` : Caminos recorridos: (1,3,5,7).
+    <br><br> ![alt text](/Bisiestos/GrafoBisiestos.png "Diagrama Bisiestos")
+
 
 ---
 
@@ -54,21 +53,21 @@
   * **Apartado 4.** Valores adecuados a cada bloque según criterios de cobertura:
     * C1: string vacío | XVII | HJK / MMJ / IIIII
 
-  * **Apartado 5 (Práctica 2).** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
+  * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
     * Por simplicidad, solo se hace el grafo del método `convierte`:  
       **NO ESTÁ BIEN RT**: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6] [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
 
-  * **Apartado 6 (Práctica 2).** Enumerad caminos de prueba/test de PPC:
+  * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
     * Caminos de prueba: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6]
       [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
 
-  * **Apartado 7 (Práctica 2).** Diagrama + comentarios en tests:
+  * **Práctica 2.c)** Diagrama + comentarios en tests:
     * En nuestro caso, hay test que son redundantes y no se prueban, como por ejemplo (1,3,4,5,8,4,6) que sería solo testear que la
       entrada sea el número romano D. Para ello utilizamos *testForRoman*.
     * `testForNullString`: Caminos recorridos: (1,2).
     * `testForNoRoman`: Caminos recorridos: (1,3,4,5,14).
     * `testForRoman`: Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6).
-    * INSERTAR IMAGEN
+    <br><br> ![alt text](/Romanos/GrafoRomanos.png "Diagrama Romanos")
 
 
 ---
@@ -140,18 +139,15 @@
   * **Apartado 4.** Da valores adecuados a cada bloque según criterios de cobertura:
     * C1: -2.0 | 0.0 | 25.50
 
-  * **Apartado 5 (Práctica 2).** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
-    * Por simplicidad, solo se hace el grafo del método `convierte`:  
-      **NO ESTÁ BIEN RT**: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6] [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+  * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:    
+      RT: [1, 2] [1, 3, 4] [1, 3, 5]
 
-  * **Apartado 6 (Práctica 2).** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6]
-      [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+  * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
+    * Caminos de prueba: [1, 2] [1, 3, 4] [1, 3, 5]
 
-  * **Apartado 7 (Práctica 2).** Diagrama + comentarios en tests:
-    * En nuestro caso, hay test que son redundantes y no se prueban, como por ejemplo (1,3,4,5,8,4,6) que sería solo testear que la
-      entrada sea el número romano D. Para ello utilizamos *testForRoman*.
-    * `testForNullString`: Caminos recorridos: (1,2).
-    * `testForNoRoman`: Caminos recorridos: (1,3,4,5,14).
-    * `testForRoman`: Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6).
-    * INSERTAR IMAGEN
+  * **Práctica 2.c)** Diagrama + comentarios en tests:
+    * `testForNegativePrice`: Caminos recorridos: (1,2).
+    * `testForZeroPrice`: Caminos recorridos: (1,2).
+    * `testForValidPrice`: Caminos recorridos: (1,3,4).
+    * Añadimos `testForValidPriceDesc`: Caminos recorridos: (1,3,5).
+      <br><br> ![alt text](/BlackFriday/GrafoBlackFriday.png "Diagrama Black Friday")
