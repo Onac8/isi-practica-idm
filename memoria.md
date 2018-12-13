@@ -35,7 +35,7 @@
     * `testForZeroYear` : Caminos recorridos: (1,3,4,7).
     * `testMult4`, `testMult100`, `testMult400`: Caminos recorridos: (1,3,5,6,7).
     * Añadimos `testForNoBisiesto` : Caminos recorridos: (1,3,5,7).
-    <br><br> ![alt text](/Bisiestos/GrafoBisiestos.png "Diagrama Bisiestos")
+    <br><br> ![alt text](/Bisiestos/GrafoBisiestos-v2.png "Grafo Bisiestos")
 
 
 ---
@@ -67,7 +67,7 @@
     * `testForNullString`: Caminos recorridos: (1,2).
     * `testForNoRoman`: Caminos recorridos: (1,3,4,5,14).
     * `testForRoman`: Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6).
-    <br><br> ![alt text](/Romanos/GrafoRomanos.png "Diagrama Romanos")
+    <br><br> ![alt text](/Romanos/GrafoRomanos.png "Grafo Romanos")
 
 
 ---
@@ -150,4 +150,4 @@
     * `testForZeroPrice`: Caminos recorridos: (1,2).
     * `testForValidPrice`: Caminos recorridos: (1,3,4).
     * Añadimos `testForValidPriceDesc`: Caminos recorridos: (1,3,5).
-      <br><br> ![alt text](/BlackFriday/GrafoBlackFriday.png "Diagrama Black Friday")
+      <br><br> ![alt text](/BlackFriday/GrafoBlackFriday.png "Grafo Black Friday")
