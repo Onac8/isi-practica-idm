@@ -25,16 +25,18 @@
     * C3: 100 | 101
     * C4: 400 | 401
   * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
-    * RT: [1, 2] [1, 3, 4, 7] [1, 3, 5, 7] [1, 3, 5, 6, 7]
+    * RT: [1, 2, 3], [1, 2, 4, 5, 8], [1, 2, 4, 6, 7, 8], [1, 2, 4, 6, 8]
 
   * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2] [1, 3, 4, 7] [1, 3, 5, 7] [1, 3, 5, 6, 7]
+    * Caminos de prueba: [1, 2, 3], [1, 2, 4, 5, 8], [1, 2, 4, 6, 7, 8], [1, 2, 4, 6, 8]
 
   * **Práctica 2.c)** Diagrama + comentarios en tests:
-    * `testForNegativeYear` : Caminos recorridos: (1,2).
-    * `testForZeroYear` : Caminos recorridos: (1,3,4,7).
-    * `testMult4`, `testMult100`, `testMult400`: Caminos recorridos: (1,3,5,6,7).
-    * Añadimos `testForNoBisiesto` : Caminos recorridos: (1,3,5,7).
+    * `testForNegativeYear` : Caminos recorridos: (1,2,3).
+    * `testForZeroYear` : Caminos recorridos: (1,2,4,5,8).
+    * `testMult4`: Caminos recorridos: (1,2,4,6,7,8).
+	 * `testMult100`: Caminos recorridos: (1,2,4,6,8).
+	 * `testMult400`: Caminos recorridos: (1,2,4,6,7,8).
+    * Añadimos `testForNoBisiesto` : Caminos recorridos: (1,2,4,6,8).
     <br><br> ![alt text](/Bisiestos/GrafoBisiestos-v2.png "Grafo Bisiestos")
 
 
