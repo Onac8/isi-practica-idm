@@ -19,6 +19,7 @@ public class EmbotelladoraTest
 	}
 
 	//Test con botellas pequenas negativas
+	//Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class) // Este test decora la anotación @Test con la clase de la excepción esperada.
 	public void testForNegativePequenas()
 	{
@@ -26,6 +27,7 @@ public class EmbotelladoraTest
 	}
 
 	//Test con botellas grandes negativas
+	//Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNegativeGrandes()
 	{
@@ -33,6 +35,7 @@ public class EmbotelladoraTest
 	}
 
 	//Test con litros totales < 0
+	//Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForNegativeTotal()
 	{
@@ -40,6 +43,7 @@ public class EmbotelladoraTest
 	}
 
 	//Test con pequenas=grandes=0
+	//Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForZeroBotellas()
 	{
@@ -47,6 +51,7 @@ public class EmbotelladoraTest
 	}
 
 	//Test con litros totales = 0
+	//Caminos recorridos: (1,2)
 	@Test (expected = IllegalArgumentException.class)
 	public void testForZeroTotal()
 	{
@@ -54,6 +59,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,8,10)
 	@Test
 	public void testForSoloPequeñas()
 	{
@@ -61,6 +67,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,4,5)
 	@Test
 	public void testForSoloGrandes()
 	{
@@ -68,6 +75,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,14)
 	@Test
 	public void testForAmbasBotellas()
 	{
@@ -75,6 +83,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,14)
 	@Test
 	public void testForIgualCantidad()
 	{
@@ -82,6 +91,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,14)
 	@Test
 	public void testForMasPequenas()
 	{
@@ -89,6 +99,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,14)
 	@Test
 	public void testForAbastecemosJustas()
 	{
@@ -96,6 +107,7 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,15)
 	@Test
 	public void testForNoAbastecemos()
 	{
@@ -103,9 +115,45 @@ public class EmbotelladoraTest
 	}
 
 
+	//Caminos recorridos: (1,3,5,9,13,14)
 	@Test
 	public void testForAbastacemosSobra()
 	{
 		assertTrue("testForAbastacemosSobra_Error", 2 == embotelladora.calculaBotellasPequenas(10,1,7));
+	}
+
+	///////////
+	// ADDED //
+	//////////
+
+	//Caminos recorridos: (1,3,4,6)
+	@Test
+	public void testPrueba1()
+	{
+		assertTrue("testPrueba1", 0 == embotelladora.calculaBotellasPequenas(0,4,20));
+	}
+
+
+	//Caminos recorridos: (1,3,4,7)
+	@Test
+	public void testPrueba2()
+	{
+		assertTrue("testPrueba2", -1 == embotelladora.calculaBotellasPequenas(0,4,30));
+	}
+
+
+	//Caminos recorridos: (1,3,5,8,11)
+	@Test
+	public void testPrueba3()
+	{
+		assertTrue("testPrueba3", -1 == embotelladora.calculaBotellasPequenas(2,0,3));
+	}
+
+
+	//Caminos recorridos: (1,3,5,9,12)
+	@Test
+	public void testPrueba4()
+	{
+		assertTrue("testPrueba4", 0 == embotelladora.calculaBotellasPequenas(7,3,13));
 	}
 }
