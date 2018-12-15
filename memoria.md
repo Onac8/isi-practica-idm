@@ -57,11 +57,10 @@
 
   * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
     * Por simplicidad, solo se hace el grafo del método `convierte`:  
-      **NO ESTÁ BIEN RT**: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6] [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+      **NO ESTÁ BIEN RT**: [1, 2], [1, 3, 4, 6], [1, 3, 4, 5, 7, 4, 6], [1, 3, 4, 5, 8, 4, 6], [1, 3, 4, 5, 9, 4, 6], [1, 3, 4, 5, 10, 4, 6], [1, 3, 4, 5, 11, 4, 6], [1, 3, 4, 5, 12, 4, 6], [1, 3, 4, 5, 13, 4, 6], [1, 3, 4, 5, 14, 4, 6]
 
   * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6]
-      [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+    * Caminos de prueba: [1, 2], [1, 3, 4, 6], [1, 3, 4, 5, 7, 4, 6], [1, 3, 4, 5, 8, 4, 6], [1, 3, 4, 5, 9, 4, 6], [1, 3, 4, 5, 10, 4, 6], [1, 3, 4, 5, 11, 4, 6], [1, 3, 4, 5, 12, 4, 6], [1, 3, 4, 5, 13, 4, 6], [1, 3, 4, 5, 14, 4, 6]
 
   * **Práctica 2.c)** Diagrama + comentarios en tests:
     * En nuestro caso, hay test que son redundantes y no se prueban, como por ejemplo (1,3,4,5,8,4,6) que sería solo testear que la
@@ -109,21 +108,32 @@
     * C3: 10,0,-10 | 10,0,0 | 10,10,10
     * C4: 0,2,10 | 2,0,10 | 5,2,13
 
-  * **Apartado 5 (Práctica 2).** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
-    * Por simplicidad, solo se hace el grafo del método `convierte`:  
-      **NO ESTÁ BIEN RT**: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6] [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+ * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:    
+     RT: [1, 2], [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 10], [1, 3, 5, 8, 11], [1, 3, 5, 9, 12], [1, 3, 5, 9, 13, 14], [1, 3, 5, 9, 13, 15]
 
-  * **Apartado 6 (Práctica 2).** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2] [1, 3, 4, 6] [1, 3, 4, 5, 7, 4, 6] [1, 3, 4, 5, 8, 4, 6] [1, 3, 4, 5, 9, 4, 6] [1, 3, 4, 5, 10, 4, 6]
-      [1, 3, 4, 5, 11, 4, 6] [1, 3, 4, 5, 12, 4, 6] [1, 3, 4, 5, 13, 4, 6] [1, 3, 4, 5, 14, 4, 6]
+ * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
+   * Caminos de prueba: [1, 2], [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 10], [1, 3, 5, 8, 11], [1, 3, 5, 9, 12], [1, 3, 5, 9, 13, 14], [1, 3, 5, 9, 13, 15]
 
-  * **Apartado 7 (Práctica 2).** Diagrama + comentarios en tests:
-    * En nuestro caso, hay test que son redundantes y no se prueban, como por ejemplo (1,3,4,5,8,4,6) que sería solo testear que la
-      entrada sea el número romano D. Para ello utilizamos *testForRoman*.
-    * `testForNullString`: Caminos recorridos: (1,2).
-    * `testForNoRoman`: Caminos recorridos: (1,3,4,5,14).
-    * `testForRoman`: Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6).
-    * INSERTAR IMAGEN
+ * **Práctica 2.c)** Diagrama + comentarios en tests:
+   * `testForNegativePequenas`: Caminos recorridos: (1,2).
+   * `testForNegativeGrandes`: Caminos recorridos: (1,2).
+   * `testForNegativeTotal`: Caminos recorridos: (1,2).
+   * `testForZeroBotellas`: Caminos recorridos: (1,2).
+	* `testForZeroTotal`: Caminos recorridos: (1,2).
+	* `testForSoloPequeñas`: Caminos recorridos: (1,3,5,8,10).
+	* `testForSoloGrandes`: Caminos recorridos: (1,3,4,5).
+	* `testForAmbasBotellas`: Caminos recorridos: (1,3,5,9,13,14).
+	* `testForIgualCantidad`: Caminos recorridos: (1,3,5,9,13,14).
+	* `testForMasPequenas`: Caminos recorridos: (1,3,5,9,13,14).
+	* `testForAbastecemosJustas`: Caminos recorridos: (1,3,5,9,13,14).
+	* `testForNoAbastecemos`: Caminos recorridos: (1,3,5,9,13,15).
+	* `testForAbastacemosSobra`: Caminos recorridos: (1,3,5,9,13,14).
+	* Con los tests que teníamos diseñados, falta por recorrer caminos: [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 11] y [1, 3, 5, 9, 12], por lo que:
+	* Añadimos `testPrueba1`: Caminos recorridos: (1,3,4,6).
+	* Añadimos `testPrueba2`: Caminos recorridos: (1,3,4,7).
+	* Añadimos `testPrueba3`: Caminos recorridos: (1,3,5,8,11).
+	* Añadimos `testPrueba4`: Caminos recorridos: (1,3,5,9,12).
+     <br><br> ![alt text](/Embotelladora/GrafoEmbotelladora.png "Grafo Embotelladora")
 
 ---
 
