@@ -31,12 +31,12 @@
     * Caminos de prueba: [1, 2, 3], [1, 2, 4, 5, 8], [1, 2, 4, 6, 7, 8], [1, 2, 4, 6, 8]
 
   * **Práctica 2.c)** Diagrama + comentarios en tests:
-    * `testForNegativeYear` : Caminos recorridos: (1,2,3).
-    * `testForZeroYear` : Caminos recorridos: (1,2,4,5,8).
-    * `testMult4`: Caminos recorridos: (1,2,4,6,7,8).
-	 * `testMult100`: Caminos recorridos: (1,2,4,6,8).
-	 * `testMult400`: Caminos recorridos: (1,2,4,6,7,8).
-    * Añadimos `testForNoBisiesto` : Caminos recorridos: (1,2,4,6,8).
+    * `testForNegativeYear` : Caminos recorridos: [1,2,3].
+    * `testForZeroYear` : Caminos recorridos: [1,2,4,5,8].
+    * `testMult4`: Caminos recorridos: [1,2,4,6,7,8].
+    * `testMult100`: Caminos recorridos: [1,2,4,6,8].
+    * `testMult400`: Caminos recorridos: [1,2,4,6,7,8].
+    * Añadimos `testForNoBisiesto` : Caminos recorridos: [1,2,4,6,8].
     <br><br> ![alt text](/Bisiestos/GrafoBisiestos-v2.png "Grafo Bisiestos")
 
 
@@ -57,17 +57,38 @@
 
   * **Práctica 2.a)** Enumerad los requisitos de prueba/test de acuerdo a PPC:  
     * Por simplicidad, solo se hace el grafo del método `convierte`:  
-      **NO ESTÁ BIEN RT**: [1, 2], [1, 3, 4, 6], [1, 3, 4, 5, 7, 4, 6], [1, 3, 4, 5, 8, 4, 6], [1, 3, 4, 5, 9, 4, 6], [1, 3, 4, 5, 10, 4, 6], [1, 3, 4, 5, 11, 4, 6], [1, 3, 4, 5, 12, 4, 6], [1, 3, 4, 5, 13, 4, 6], [1, 3, 4, 5, 14, 4, 6]
+	 * [1,2]
+	 * [1,3,4,6]
+	 * [1,3,4,5,7], [1,3,4,5,8], [1,3,4,5,9], [1,3,4,5,10],[1,3,4,5,11],[1,3,4,5,12], [1,3,4,5,13], [1,3,4,5,14]
+	 * [4,5,7,4], [4,5,8,4], [4,5,9,4], [4,5,10,4], [4,5,11,4], [4,5,12,4], [4,5,13,4]
+	 * [5,7,4,5], [5,8,4,5], [5,9,4,5], [5,10,4,5], [5,11,4,5], [5,12,4,5], [5,13,4,5]
+	 * [5,7,4,6], [5,8,4,6], [5,9,4,6], [5,10,4,6], [5,11,4,6], [5,12,4,6], [5,13,4,6]
+	 * [7,4,5,7], [7,4,5,8], [7,4,5,9], [7,4,5,10], [7,4,5,11], [7,4,5,12], [7,4,5,13], [7,4,5,14]
+	 * [8,4,5,7], [8,4,5,8], [8,4,5,9], [8,4,5,10], [8,4,5,11], [8,4,5,12], [8,4,5,13], [8,4,5,14]
+	 * [9,4,5,7], [9,4,5,8], [9,4,5,9], [9,4,5,10], [9,4,5,11], [9,4,5,12], [9,4,5,13], [9,4,5,14]
+	 * [10,4,5,7], [10,4,5,8], [10,4,5,9], [10,4,5,10], [10,4,5,11], [10,4,5,12], [10,4,5,13], [10,4,5,14]
+	 * [11,4,5,7], [11,4,5,8], [11,4,5,9], [11,4,5,10], [11,4,5,11], [11,4,5,12],[11,4,5,13], [11,4,5,14]
+	 * [12,4,5,7], [12,4,5,8], [12,4,5,9], [12,4,5,10], [12,4,5,11], [12,4,5,12],[12,4,5,13], [12,4,5,14]
+	 * [13,4,5,7], [13,4,5,8], [13,4,5,9], [13,4,5,10], [13,4,5,11], [13,4,5,12],[13,4,5,13], [13,4,5,14]
 
   * **Práctica 2.b)** Enumerad caminos de prueba/test de PPC:
-    * Caminos de prueba: [1, 2], [1, 3, 4, 6], [1, 3, 4, 5, 7, 4, 6], [1, 3, 4, 5, 8, 4, 6], [1, 3, 4, 5, 9, 4, 6], [1, 3, 4, 5, 10, 4, 6], [1, 3, 4, 5, 11, 4, 6], [1, 3, 4, 5, 12, 4, 6], [1, 3, 4, 5, 13, 4, 6], [1, 3, 4, 5, 14, 4, 6]
+    * Caminos de prueba:
+	 * [1,2]
+	 * [1,3,4,6]
+	 * [1,3,4,5,14]
+	 * [1,3,4,5,7,4,6], [1,3,4,5,8,4,6], [1,3,4,5,9,4,6], [1,3,4,5,10,4,6], [1,3,4,5,11,4,6], [1,3,4,5,12,4,6], [1,3,4,5,13,4,6] (No hacen falta evaluarlos. REDUNDANTES, aparecen posteriormente).
+	 * [1,3,4,5,7,4,5,7,4,6], [1,3,4,5,7,4,5,8,4,6], [1,3,4,5,7,4,5,9,4,6], [1,3,4,5,7,4,5,10,4,6], [1,3,4,5,7,4,5,11,4,6], [1,3,4,5,7,4,5,12,4,6], [1,3,4,5,7,4,5,13,4,6], [1,3,4,5,7,4,5,14]
+	 * [1,3,4,5,8,4,5,7,4,6], [1,3,4,5,8,4,5,8,4,6], [1,3,4,5,8,4,5,9,4,6], [1,3,4,5,8,4,5,10,4,6], [1,3,4,5,8,4,5,11,4,6], [1,3,4,5,8,4,5,12,4,6], [1,3,4,5,8,4,5,13,4,6], [1,3,4,5,8,4,5,14]
+	 * [1,3,4,5,9,4,5,7,4,6], [1,3,4,5,9,4,5,8,4,6], [1,3,4,5,9,4,5,9,4,6], [1,3,4,5,9,4,5,10,4,6], [1,3,4,5,9,4,5,11,4,6], [1,3,4,5,9,4,5,12,4,6], [1,3,4,5,9,4,5,13,4,6], [1,3,4,5,9,4,5,14]
+	 * [1,3,4,5,10,4,5,7,4,6], [1,3,4,5,10,4,5,8,4,6], [1,3,4,5,10,4,5,9,4,6], [1,3,4,5,10,4,5,10,4,6], [1,3,4,5,10,4,5,11,4,6], [1,3,4,5,10,4,5,12,4,6], [1,3,4,5,10,4,5,13,4,6], [1,3,4,5,10,4,5,14]
+	 * [1,3,4,5,11,4,5,7,4,6], [1,3,4,5,11,4,5,8,4,6], [1,3,4,5,11,4,5,9,4,6], [1,3,4,5,11,4,5,10,4,6], [1,3,4,5,11,4,5,11,4,6], [1,3,4,5,11,4,5,12,4,6], [1,3,4,5,11,4,5,13,4,6], [1,3,4,5,11,4,5,14]
+	 * [1,3,4,5,12,4,5,7,4,6], [1,3,4,5,12,4,5,8,4,6], [1,3,4,5,12,4,5,9,4,6], [1,3,4,5,12,4,5,10,4,6], [1,3,4,5,12,4,5,11,4,6], [1,3,4,5,12,4,5,12,4,6], [1,3,4,5,12,4,5,13,4,6], [1,3,4,5,12,4,5,14]
+	 * [1,3,4,5,13,4,5,7,4,6], [1,3,4,5,13,4,5,8,4,6], [1,3,4,5,13,4,5,9,4,6], [1,3,4,5,13,4,5,10,4,6], [1,3,4,5,13,4,5,11,4,6], [1,3,4,5,13,4,5,12,4,6], [1,3,4,5,13,4,5,13,4,6], [1,3,4,5,13,4,5,14]
 
   * **Práctica 2.c)** Diagrama + comentarios en tests:
-    * En nuestro caso, hay test que son redundantes y no se prueban, como por ejemplo (1,3,4,5,8,4,6) que sería solo testear que la
-      entrada sea el número romano D. Para ello utilizamos *testForRoman*.
-    * `testForNullString`: Caminos recorridos: (1,2).
-    * `testForNoRoman`: Caminos recorridos: (1,3,4,5,14).
-    * `testForRoman`: Caminos recorridos: (1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6).
+    * `testForNullString`: Caminos recorridos: [1,2].
+    * `testForNoRoman`: Caminos recorridos: [1,3,4,5,14].
+    * `testForRoman`: Caminos recorridos: [1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6].
     <br><br> ![alt text](/Romanos/GrafoRomanos.png "Grafo Romanos")
 
 
@@ -115,24 +136,24 @@
    * Caminos de prueba: [1, 2], [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 10], [1, 3, 5, 8, 11], [1, 3, 5, 9, 12], [1, 3, 5, 9, 13, 14], [1, 3, 5, 9, 13, 15]
 
  * **Práctica 2.c)** Diagrama + comentarios en tests:
-   * `testForNegativePequenas`: Caminos recorridos: (1,2).
-   * `testForNegativeGrandes`: Caminos recorridos: (1,2).
-   * `testForNegativeTotal`: Caminos recorridos: (1,2).
-   * `testForZeroBotellas`: Caminos recorridos: (1,2).
-	* `testForZeroTotal`: Caminos recorridos: (1,2).
-	* `testForSoloPequeñas`: Caminos recorridos: (1,3,5,8,10).
-	* `testForSoloGrandes`: Caminos recorridos: (1,3,4,5).
-	* `testForAmbasBotellas`: Caminos recorridos: (1,3,5,9,13,14).
-	* `testForIgualCantidad`: Caminos recorridos: (1,3,5,9,13,14).
-	* `testForMasPequenas`: Caminos recorridos: (1,3,5,9,13,14).
-	* `testForAbastecemosJustas`: Caminos recorridos: (1,3,5,9,13,14).
-	* `testForNoAbastecemos`: Caminos recorridos: (1,3,5,9,13,15).
-	* `testForAbastacemosSobra`: Caminos recorridos: (1,3,5,9,13,14).
-	* Con los tests que teníamos diseñados, falta por recorrer caminos: [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 11] y [1, 3, 5, 9, 12], por lo que:
-	* Añadimos `testPrueba1`: Caminos recorridos: (1,3,4,6).
-	* Añadimos `testPrueba2`: Caminos recorridos: (1,3,4,7).
-	* Añadimos `testPrueba3`: Caminos recorridos: (1,3,5,8,11).
-	* Añadimos `testPrueba4`: Caminos recorridos: (1,3,5,9,12).
+   * `testForNegativePequenas`: Caminos recorridos: [1,2].
+   * `testForNegativeGrandes`: Caminos recorridos: [1,2].
+   * `testForNegativeTotal`: Caminos recorridos: [1,2].
+   * `testForZeroBotellas`: Caminos recorridos: [1,2].
+   * `testForZeroTotal`: Caminos recorridos: [1,2].
+   * `testForSoloPequeñas`: Caminos recorridos: [1,3,5,8,10].
+   * `testForSoloGrandes`: Caminos recorridos: [1,3,4,5].
+   * `testForAmbasBotellas`: Caminos recorridos: [1,3,5,9,13,14].
+   * `testForIgualCantidad`: Caminos recorridos: [1,3,5,9,13,14].
+   * `testForMasPequenas`: Caminos recorridos: [1,3,5,9,13,14].
+   * `testForAbastecemosJustas`: Caminos recorridos: [1,3,5,9,13,14].
+   * `testForNoAbastecemos`: Caminos recorridos: [1,3,5,9,13,15].
+   * `testForAbastacemosSobra`: Caminos recorridos: [1,3,5,9,13,14].
+   * Con los tests que teníamos diseñados, falta por recorrer caminos: [1, 3, 4, 6], [1, 3, 4, 7], [1, 3, 5, 8, 11] y [1, 3, 5, 9, 12], por lo que:
+   * Añadimos `testPrueba1`: Caminos recorridos: [1,3,4,6].
+   * Añadimos `testPrueba2`: Caminos recorridos: [1,3,4,7].
+   * Añadimos `testPrueba3`: Caminos recorridos: [1,3,5,8,11].
+   * Añadimos `testPrueba4`: Caminos recorridos: [1,3,5,9,12].
      <br><br> ![alt text](/Embotelladora/GrafoEmbotelladora.png "Grafo Embotelladora")
 
 ---
@@ -158,8 +179,8 @@
     * Caminos de prueba: [1, 2] [1, 3, 4] [1, 3, 5]
 
   * **Práctica 2.c)** Diagrama + comentarios en tests:
-    * `testForNegativePrice`: Caminos recorridos: (1,2).
-    * `testForZeroPrice`: Caminos recorridos: (1,2).
-    * `testForValidPrice`: Caminos recorridos: (1,3,4).
-    * Añadimos `testForValidPriceDesc`: Caminos recorridos: (1,3,5).
+    * `testForNegativePrice`: Caminos recorridos: [1,2].
+    * `testForZeroPrice`: Caminos recorridos: [1,2].
+    * `testForValidPrice`: Caminos recorridos: [1,3,4].
+    * Añadimos `testForValidPriceDesc`: Caminos recorridos: [1,3,5].
       <br><br> ![alt text](/BlackFriday/GrafoBlackFriday.png "Grafo Black Friday")
