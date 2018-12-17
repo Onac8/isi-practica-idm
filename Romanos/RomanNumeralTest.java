@@ -49,4 +49,20 @@ public class RomanNumeralTest
 		assertTrue("Ese numero no es romano", 17 == number.convierte("XVII")); // Se imprimirá este msg si test falla
 	}
 
+
+	// Caminos recorridos: (1,3,4,5,7,4,5,7,4,6)
+	@Test
+	public void testPrueba1()
+	{
+		assertTrue("Ese numero no es romano", 2000 == number.convierte("MM")); // Se imprimirá este msg si test falla
+	}
+
+
+	// Caminos recorridos: (1,3,4,5,7,4,5,14)
+	@Test (expected = IllegalArgumentException.class)
+	public void testPrueba2()
+	{
+		number.convierte("HM");
+	}
+
 }

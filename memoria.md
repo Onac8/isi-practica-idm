@@ -88,7 +88,11 @@
   * **Práctica 2.c)** Diagrama + comentarios en tests:
     * `testForNullString`: Caminos recorridos: [1,2].
     * `testForNoRoman`: Caminos recorridos: [1,3,4,5,14].
-    * `testForRoman`: Caminos recorridos: [1,3,4,5,11,4,5,12,4,5,13,4,5,13,4,6].
+    * `testForRoman`: Caminos recorridos: [1,3,4,5,13,4,5,13,4,5,12,4,5,11,4,6].
+	 * El camino [1,3,4,6] es inviable que sea recorrido, por lo que no habrá test para él. (Es inviable porque en la primera pasada del bucle for, la variable x no puede tomar valor negativo, como mínimo tomará valor 0 si el argumento de entrada al método es un String de un solo caracter. Recordemos que de ser el argumento de entrada un String vacío, el camino que seguiría sería el [1,2]).
+	 * Añadimos `testPrueba1`: Caminos recorridos: [1,3,4,5,7,4,5,7,4,6] ***(I)***
+	 * Añadimos `testPrueba2`: Caminos recorridos: [1,3,4,5,7,4,5,14] ***(II)***
+	 * Hemos añadido solo dos casos particulares del `testForRoman` (uno que ejecuta dos veces el bucle switch-case y hace el return ***(I)***; y otro que ejecuta el bucle dos veces pero acabando entrando por el default del switch, lanzando la excepción `IllegalArgumentException` ***(II)***), ya que entendemos que, al ser implementados por el mismo switch-case, si funcionan estos dos, han de funcionar todos.
     <br><br> ![alt text](/Romanos/GrafoRomanos.png "Grafo Romanos")
 
 
